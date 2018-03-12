@@ -201,6 +201,11 @@
           '-fvisibility=hidden',
         ],
       }],
+      ['_target_name=="openssl-cli"', {
+        'ldflags!': [
+          '-nostdlib++',
+        ]
+      }],
       ['_target_name=="libuv"', {
         'conditions': [
           ['OS=="win"', {
